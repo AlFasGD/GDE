@@ -401,6 +401,28 @@ namespace GDEdit.Utilities.Functions.Extensions
             str = str.Remove(str.Length - separator.Length, separator.Length);
             return str.ToString();
         }
+        /// <summary>Combines the strings of a string list and returns the new string.</summary>
+        /// <param name="s">The list of strings.</param>
+        public static string Combine(this List<string> s)
+        {
+            StringBuilder str = new StringBuilder();
+            for (int i = 0; i < s.Count; i++)
+                str = str.Append(s[i]);
+            return str.ToString();
+        }
+        /// <summary>Combines the strings of a string list with a separator and returns the new string.</summary>
+        /// <param name="s">The list of strings.</param>
+        /// <param name="separator">The separator of the strings.</param>
+        public static string Combine(this List<string> s, string separator)
+        {
+            if (s.Count == 0)
+                return "";
+            StringBuilder str = new StringBuilder();
+            for (int i = 0; i < s.Count; i++)
+                str = str.Append(s[i] + separator);
+            str = str.Remove(str.Length - separator.Length, separator.Length);
+            return str.ToString();
+        }
         /// <summary>Splits an array of strings and returns a new two-dimensiional array containing the split strings. With indexing [i, j], i is the index of the string in the original array and j is the index of the split string.</summary>
         /// <param name="s">The array of strings.</param>
         /// <param name="separator">The separator of the strings.</param>

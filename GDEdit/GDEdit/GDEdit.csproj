@@ -38,6 +38,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Conversion.v4.0" />
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -264,6 +270,9 @@
     <Compile Include="Utilities\Objects\GeometryDash\Level.cs" />
     <Compile Include="Utilities\Objects\GeometryDash\LevelObject.cs" />
     <Compile Include="Utilities\Objects\Presets\GuidelineEditorPresetMeasure.cs" />
+    <Compile Include="Utilities\Objects\Scripting\CompilationIssue.cs" />
+    <Compile Include="Utilities\Objects\Scripting\CSharpScript.cs" />
+    <Compile Include="Utilities\Objects\Scripting\Script.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
