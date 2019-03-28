@@ -41,7 +41,7 @@ namespace GDEdit.Utilities.Objects.Scripting
         /// <summary>Initializes the script before it is compiled.</summary>
         protected override void InitializeScript()
         {
-
+            base.InitializeScript();
         }
         /// <summary>Executes the script.</summary>
         /// <param name="level">The level to apply the script on.</param>

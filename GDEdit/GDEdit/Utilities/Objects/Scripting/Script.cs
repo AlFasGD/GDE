@@ -68,7 +68,11 @@ namespace GDEdit.Utilities.Objects.Scripting
         public abstract bool CompileScript(out List<CompilationIssue> errors);
 
         /// <summary>Initializes the script before it is compiled.</summary>
-        protected abstract void InitializeScript();
+        protected virtual void InitializeScript()
+        {
+            // FUCK TABS
+            source = source.Replace('\t', ' ');
+        }
         /// <summary>Executes the script.</summary>
         /// <param name="levels">The levels to apply the script on.</param>
         protected abstract void ExecuteScript(Level[] levels);
